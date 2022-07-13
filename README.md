@@ -67,7 +67,7 @@ DAEMON = True
 
 -   BIND_PORT
 
-    Thehttp server will listen to that port. Value is type of int.
+    The http server will listen to that port. Value is type of int.
 
 -   DAEMON
 
