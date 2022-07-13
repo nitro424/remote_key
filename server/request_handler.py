@@ -1,19 +1,20 @@
 """
-TODO: doc-string
+This module provides a custom http request handler derived from BaseHTTPRequestHandler
 """
 from http.server import BaseHTTPRequestHandler
 
 
 class RequestHandler(BaseHTTPRequestHandler):
     """
-    TODO: doc-string
+    This request handler only serves a key on GET /
     """
 
     key = ""
 
     def do_GET(self):
         """
-        TODO: doc-string"""
+        Provides a key in plain text utf-8 on GET /
+        """
         print("GET")
         if self.path == "/":
             self.send_response(200)
