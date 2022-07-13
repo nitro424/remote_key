@@ -114,3 +114,13 @@ docker run -it --name=remote_key -p 8000:8000 -e CRYPT_STORE_PATH=/remote_key/st
 ```
 
 It might be useful to use docker [bind mount](https://docs.docker.com/storage/bind-mounts/) for the store file otherwhise the store will be gone after destroying the docker container.
+
+### Stop and start existing container
+
+```bash
+docker stop remote_key
+```
+
+```bash
+docker start -ai remote_key
+```
