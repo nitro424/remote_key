@@ -63,7 +63,7 @@ DAEMON = True
 
 -   BIND_ADDRESS
 
-    The http server will listen to that address. Useful values are `"0.0.0.0"` when direct access is needed or `"120.0.0.1"` when using a reverse proxy.
+    The http server will listen to that address. Useful values are `"0.0.0.0"` when direct access is needed or `"127.0.0.1"` when using a reverse proxy.
 
 -   BIND_PORT
 
