@@ -73,7 +73,7 @@ DAEMON = True
 
     Sets the http server to daemon mode to be able to exit the shell after start. Makes no sense when running in docker. Value is type of bool (`True`|`False`).
 
-Every value can also set using environment variables. This is useful in docker mode.
+Every value can also be set using environment variables. This is useful in docker mode.
 
 ## Run the program
 
