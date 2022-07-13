@@ -83,7 +83,7 @@ Make sure the python virtual environment is activated.
 source remote_key/venv/bin/activate
 ```
 
-The just run the program as follows.
+Run the program as follows.
 
 ```bash
 python remote_key
