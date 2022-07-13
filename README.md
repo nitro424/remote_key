@@ -79,10 +79,6 @@ Every value can also be set using environment variables. This is useful in docke
 
 Make sure the python virtual environment is activated.
 
-```bash
-source remote_key/venv/bin/activate
-```
-
 Run the program as follows.
 
 ```bash
