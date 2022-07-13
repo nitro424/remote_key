@@ -40,9 +40,19 @@ def start_server(key: str):
     """
     print(f"Serving key at http://{config.BIND_ADDRESS}:{config.BIND_PORT}/")
     print("Please use a reverse proxy to secure communiaction with https")
-    print("Daemonizing...")
-    with daemon.DaemonContext():
-        server.run(key, bind_address=config.BIND_ADDRESS, bind_port=config.BIND_PORT)
+    if config.DAEMON:
+        print("Daemonizing...")
+        with daemon.DaemonContext():
+            run_server(key)
+    else:
+        run_server(key)
+
+
+def run_server(key: str):
+    """
+    Calls the HTTPServer run function
+    """
+    server.run(key, bind_address=config.BIND_ADDRESS, bind_port=config.BIND_PORT)
 
 
 main()

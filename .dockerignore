@@ -1,0 +1,7 @@
+**/*.pyc
+**/__pycache__
+**/instance
+**/.vscode
+**/.git*
+venv
+docker-files/*.sh
