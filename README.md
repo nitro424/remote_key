@@ -88,3 +88,29 @@ The just run the program as follows.
 ```bash
 python remote_key
 ```
+
+## First start
+
+The program asks for a password and a key. The key will be stored in the given file encrypted with the password. When a store file is present, the program just asks for the password.
+
+The key will be served at http://localhost:8000 in default configuration.
+
+Its recommended to use a reverse proxy to secure the communication with https.
+
+## Docker
+
+The folder `remote_key/docker-files` contains files to use with docker.
+
+### Create a docker image
+
+```bash
+docker build -t remote_key:latest -f remote_key/docker-files/Dockerfile remote_key
+```
+
+### Create and run docker container
+
+```bash
+docker run -it --name=remote_key -p 8000:8000 -e CRYPT_STORE_PATH=/remote_key/store -e DAEMON=False remote_key
+```
+
+It might be useful to use docker [bind mount](https://docs.docker.com/storage/bind-mounts/) for the store file otherwhise the store will be gone after destroying the docker container.
