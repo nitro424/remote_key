@@ -5,7 +5,7 @@ import os
 import sys
 from sys import stderr
 from getpass import getpass
-from crypt_store.store import create_store, read_key
+from store import create_store, read_key
 
 
 def get_secret_dialog(secret_type="password", do_check=True):
