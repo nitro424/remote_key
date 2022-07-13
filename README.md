@@ -1,6 +1,6 @@
 # remote_key
 
-remote_key is a tool that serves a key via http to other applications. The key is locally stored password protected. The tool asks for a password on every start to open the crypted store file and extract the key to serve.
+remote_key is a tool that serves a key via http to other applications. The key is locally stored and password protected. The tool asks for a password on every start to open the crypted store file and extract the key to serve.
 
 ## Installation
 
@@ -15,7 +15,7 @@ sudo apt install python3-pip python3-venv git
 #### Fedora
 
 ```bash
-sudo dnf in python3-pip git
+sudo dnf install python3-pip git
 ```
 
 ### Clone repo
@@ -24,10 +24,15 @@ sudo dnf in python3-pip git
 git clone https://github.com/nitro424/remote_key.git
 ```
 
-### Create and activate python virtual environment
+### Create python virtual environment
 
 ```bash
 python3 -m venv remote_key/venv
+```
+
+### Activate python virtual environment
+
+```bash
 source remote_key/venv/bin/activate
 ```
 
